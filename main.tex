@@ -65,13 +65,25 @@
   \end{block}
 \end{frame}
 
+
+\begin{frame}[t]
+  \frametitle{架构图像}
+  \begin{figure}
+    \includegraphics[width=.8\textwidth, height=.8\textheight, keepaspectratio]{encoder_decoder.png}
+    \caption{编码器解码器}
+  \end{figure}
+\end{frame}
+
+
+
+
 \section[Time Series Models]{ 第2章 时间序列模型}\label{sec:2}
 
 
 
 \begin{frame}[t]
   \frametitle{Time series}
-  \begin{block}{时间序列模型}
+  \begin{block}{时间序列预训练模型}
     最近，预训练模型，特别是基于Transformer的预训练模型在计算机视觉和自然语言处理等领域取得了卓越的性能。受此启发，近来的研究开始考虑时间序列的预训练模型的设计。\\
 
     首先，通过有监督、无监督和自监督学习对模型进行训练来获取恰当的表示，然后模型在目标领域进行微调以求在下游的时间序列任务（例如时间序列分类以及异常检测）中获得性能提升。

@@ -1,0 +1,101 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand*\HyPL@Entry[1]{}
+\abx@aux@refcontext{none/global//global/global}
+\HyPL@Entry{0<</P(\376\377\0001)>>}
+\@writefile{nav}{\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}}
+\@writefile{nav}{\headcommand {\beamer@framepages {1}{1}}}
+\HyPL@Entry{1<</P(\376\377\0002)>>}
+\@writefile{nav}{\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}}
+\@writefile{nav}{\headcommand {\beamer@framepages {2}{2}}}
+\HyPL@Entry{2<</P(\376\377\0003)>>}
+\@writefile{toc}{\beamer@sectionintoc {1}{ 第1章 Transformer}{3}{0}{1}}
+\@writefile{nav}{\headcommand {\beamer@sectionpages {1}{2}}}
+\@writefile{nav}{\headcommand {\beamer@subsectionpages {1}{2}}}
+\@writefile{nav}{\headcommand {\sectionentry {1}{transformer}{3}{ 第1章 Transformer}{0}}}
+\newlabel{sec:1}{{1}{3}{transformer}{Doc-Start}{}}
+\@writefile{snm}{\beamer@slide {sec:1}{3}}
+\@writefile{toc}{\beamer@subsectionintoc {1}{1}{第 1 节标题}{3}{0}{1}}
+\@writefile{nav}{\headcommand {\beamer@subsectionpages {3}{2}}}
+\@writefile{nav}{\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{第 1 节缩写标题}}}
+\newlabel{subsec:1-1}{{1.1}{3}{第 1 节缩写标题}{Doc-Start}{}}
+\@writefile{snm}{\beamer@slide {subsec:1-1}{3}}
+\@writefile{snm}{\beamer@slide {eq:编码器}{3}}
+\newlabel{eq:编码器}{{1}{3}{第 1 节缩写标题}{Doc-Start}{}}
+\@writefile{snm}{\beamer@slide {eq:解码器}{3}}
+\newlabel{eq:解码器}{{2}{3}{第 1 节缩写标题}{Doc-Start}{}}
+\@writefile{nav}{\headcommand {\slideentry {1}{1}{1}{3/3}{第 1 节缩写标题}{0}}}
+\@writefile{nav}{\headcommand {\beamer@framepages {3}{3}}}
+\HyPL@Entry{3<</P(\376\377\0004)>>}
+\@writefile{toc}{\beamer@sectionintoc {2}{ 第2章 时间序列模型}{4}{0}{2}}
+\@writefile{nav}{\headcommand {\beamer@sectionpages {3}{3}}}
+\@writefile{nav}{\headcommand {\beamer@subsectionpages {3}{3}}}
+\@writefile{nav}{\headcommand {\sectionentry {2}{Time Series Models}{4}{ 第2章 时间序列模型}{0}}}
+\newlabel{sec:2}{{2}{4}{Time Series Models}{Doc-Start}{}}
+\@writefile{snm}{\beamer@slide {sec:2}{4}}
+\@writefile{nav}{\headcommand {\slideentry {2}{0}{1}{4/4}{}{0}}}
+\@writefile{nav}{\headcommand {\beamer@framepages {4}{4}}}
+\HyPL@Entry{4<</P(\376\377\0005)>>}
+\@writefile{nav}{\headcommand {\slideentry {2}{0}{2}{5/5}{}{0}}}
+\@writefile{nav}{\headcommand {\beamer@framepages {5}{5}}}
+\HyPL@Entry{5<</P(\376\377\0006)>>}
+\@writefile{toc}{\beamer@subsectionintoc {2}{1}{第 3 节标题}{6}{0}{2}}
+\@writefile{nav}{\headcommand {\beamer@subsectionpages {4}{5}}}
+\@writefile{nav}{\headcommand {\beamer@subsectionentry {0}{2}{1}{6}{第 3 节缩写标题（虽然是缩写也可以很长长长长长长）}}}
+\newlabel{subsec:1-3}{{2.1}{6}{第 3 节缩写标题（虽然是缩写也可以很长长长长长长）}{Doc-Start}{}}
+\@writefile{snm}{\beamer@slide {subsec:1-3}{6}}
+\@writefile{nav}{\headcommand {\slideentry {2}{1}{1}{6/6}{第 3 节缩写标题（虽然是缩写也可以很长长长长长长）}{0}}}
+\@writefile{nav}{\headcommand {\beamer@framepages {6}{6}}}
+\abx@aux@cite{0}{graham1989concrete}
+\abx@aux@segm{0}{0}{graham1989concrete}
+\abx@aux@cite{0}{graham1989concrete}
+\abx@aux@segm{0}{0}{graham1989concrete}
+\HyPL@Entry{6<</P(\376\377\0007)>>}
+\newlabel{thm1}{{1}{7}{\citeauthor {graham1989concrete}\citeyear {graham1989concrete}}{Doc-Start}{}}
+\@writefile{snm}{\beamer@slide {thm1}{7}}
+\@writefile{nav}{\headcommand {\slideentry {2}{1}{2}{7/7}{第 3 节缩写标题（虽然是缩写也可以很长长长长长长）}{0}}}
+\@writefile{nav}{\headcommand {\beamer@framepages {7}{7}}}
+\HyPL@Entry{7<</P(\376\377\0008)>>}
+\@writefile{toc}{\beamer@sectionintoc {3}{第二章标题}{8}{0}{3}}
+\@writefile{nav}{\headcommand {\beamer@sectionpages {4}{7}}}
+\@writefile{nav}{\headcommand {\beamer@subsectionpages {6}{7}}}
+\@writefile{nav}{\headcommand {\sectionentry {3}{第 2 章缩写标题也可以很长长长长长长长长长}{8}{第二章标题}{0}}}
+\newlabel{sec:2}{{3}{8}{第 2 章缩写标题也可以很长长长长长长长长长}{Doc-Start}{}}
+\@writefile{snm}{\beamer@slide {sec:2}{8}}
+\@writefile{nav}{\headcommand {\beamer@subsectionpages {8}{7}}}
+\@writefile{nav}{\headcommand {\beamer@subsectionentry {0}{3}{1}{8}{第 4 节缩写标题 (不在目录显示)}}}
+\newlabel{sec:2-1}{{3.1}{8}{第 4 节缩写标题 (不在目录显示)}{Doc-Start}{}}
+\@writefile{snm}{\beamer@slide {sec:2-1}{8}}
+\@writefile{nav}{\headcommand {\slideentry {3}{1}{1}{8/8}{第 4 节缩写标题 (不在目录显示)}{0}}}
+\@writefile{nav}{\headcommand {\beamer@framepages {8}{8}}}
+\abx@aux@nociteall
+\@writefile{nav}{\headcommand {\beamer@sectionpages {8}{8}}}
+\@writefile{nav}{\headcommand {\beamer@subsectionpages {8}{8}}}
+\@writefile{nav}{\headcommand {\sectionentry {4}{参考文献}{9}{参考文献}{0}}}
+\@writefile{nav}{\headcommand {\slideentry {4}{0}{0}{9/9}{第 4 节缩写标题 (不在目录显示)}{0}}}
+\@writefile{nav}{\headcommand {\beamer@framepages {9}{9}}}
+\HyPL@Entry{9<</P(\376\377\0009)>>}
+\@writefile{nav}{\headcommand {\slideentry {4}{0}{1}{10/10}{第 4 节缩写标题 (不在目录显示)}{0}}}
+\@writefile{nav}{\headcommand {\beamer@framepages {10}{10}}}
+\@writefile{nav}{\headcommand {\beamer@partpages {1}{10}}}
+\@writefile{nav}{\headcommand {\beamer@subsectionpages {8}{10}}}
+\@writefile{nav}{\headcommand {\beamer@sectionpages {8}{10}}}
+\@writefile{nav}{\headcommand {\beamer@documentpages {10}}}
+\@writefile{nav}{\headcommand {\gdef \inserttotalframenumber {9}}}
+\abx@aux@read@bbl@mdfivesum{B716F955ED09BB5562D03CE588367CFB}
+\abx@aux@defaultrefcontext{0}{graham1989concrete}{none/global//global/global}
+\abx@aux@defaultrefcontext{0}{guowei2019ucasbeamer}{none/global//global/global}
+\abx@aux@defaultrefcontext{0}{ctexorg2020ctex}{none/global//global/global}
+\abx@aux@defaultrefcontext{0}{tantau2004user}{none/global//global/global}
+\gdef \@abspage@last{10}

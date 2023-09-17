@@ -13,7 +13,7 @@
 % 页面大小 3:2
 % \documentclass[10pt, aspectratio=32]{ctexbeamer}
 
-\usetheme[logo=UCAS, sublogo=AMSS]{ucas}
+\usetheme[logo=UCAS, sublogo=naoc]{ucas}
 % logo 的选项: CAS, UCAS
 % sublogo 的选项: AMSS, AMSS2018, UCAS
 
@@ -21,11 +21,11 @@
 \usepackage[backend=biber, style=gb7714-2015]{biblatex}
 \addbibresource{ref.bib}
 
-\title[UCAS Beamer (\LaTeX{})]{中国科学院大学 Beamer (\LaTeX{})}
-\subtitle[非官方]{非官方的模版}
-\author[G.\,Chen]{\href{mailto:icgw@outlook.com}{陈国威}}
-\institute[AMSS, CAS]{中国科学院数学与系统科学研究院}
-\date[\today]{\today, 中国北京}
+\title[UCAS Beamer (\LaTeX{})]{Transformer、时间序列模型以及论文精读}
+% \subtitle[非官方]{非官方的模版}
+\author[H. Zeng]{\href{mailto:haozeng1210@gmail.com}{曾滈}}
+\institute[NAOC]{中国科学院国家天文台}
+\date[\today]{\today, 北京怀柔}
 \subject{展示主题}
 \keywords{展示, 关键词}
 
@@ -40,109 +40,103 @@
   \tableofcontents
 \end{frame}
 
-\section[第 1 章缩写标题]{第 1 章标题}\label{sec:1}
-\subsection[第 1 节缩写标题]{第 1 节标题}\label{subsec:1-1}
+\section[transformer]{ 第1章 Transformer}\label{sec:1}
+% \subsection[第 1 节缩写标题]{第 1 节标题}\label{subsec:1-1}
+
 
 \begin{frame}[t]
-  \frametitle{幻灯片标题}
-  \framesubtitle{幻灯片副标题}
-  平凡格式\quad\structure{浅灰格式}\quad\alert{强调格式}
-  \begin{itemize}
-    \item 第一级文本内容
-    \item 若该行文本内容十分长长长长长长长长长则会被强制换行
-      这里也可以包含\alert{需要强调的文本}
-      \begin{itemize}
-        \item 第二级文本内容
-          \begin{itemize}
-            \item 第三级文本内容
-          \end{itemize}
-          \alert{\item 第二级强调的文本内容}
-      \end{itemize}
-  \end{itemize}
-  \pause% 动态展示以下内容
-  \begin{enumerate}
-    \item 带序号的文本内容
-      \begin{enumerate}
-        \item 第二级文本内容且包含数学公式
-          \[\int^{\infty}_{-\infty}e^{-x^2}dx = \sqrt{\pi}\]
-      \end{enumerate}
-  \end{enumerate}
-\end{frame}
+  \frametitle{Transformer}
+  从编码器解码器架构以及注意力机制到Transformer
 
-\subsection[第 2 节缩写标题]{第 2 节标题}\label{subsec:1-2}
-
-\begin{frame}[t]
-  \frametitle{文本区块}
-  将文本放入区块内
-  \begin{block}{普通区块}
-    见 \citeauthor{guowei2019ucasbeamer}(\citeyear{guowei2019ucasbeamer}) 提供的模板
+  \begin{block}{编码器}
+    编码器的任务是将输入向量$X$编码成中间语义表示$C$，通过非线性变换实现，即：
+    \begin{equation}
+      C = F(x_1, x_2, ..., x_n)
+      \label{eq:编码器}
+    \end{equation}
   \end{block}
-  \begin{exampleblock}{示例区块}
-    \red{红色}
-  \end{exampleblock}
-  \begin{alertblock}{强调区块}
-    \green{绿色}
-  \end{alertblock}
-  脚注\footnote{\url{https://github.com/icgw/ucas-beamer}}
+
+  \begin{block}{解码器}
+    解码器的职责在于根据中间语义表示$C$以及先前生成的历史信息$y_1, y_2, ..., y_{i-1}$，产生下一个词$y_i$，即：
+    \begin{equation}
+      y_i = G(y_1, y_2, ..., y_{i-1}, C)
+      \label{eq:解码器}
+    \end{equation}
+  \end{block}
 \end{frame}
 
-% \begin{frame}[t]
-%   \frametitle{图像}
-%   \begin{figure}
-%     \includegraphics[width=.5\textwidth, height=.5\textheight, keepaspectratio]{cow-black.mps}
-%     \caption{荷斯坦黑白花牛}
-%   \end{figure}
-% \end{frame}
+\section[Time Series Models]{ 第2章 时间序列模型}\label{sec:2}
 
-\subsection[第 3 节缩写标题（虽然是缩写也可以很长长长长长长）]{第 3 节标题}\label{subsec:1-3}
+
 
 \begin{frame}[t]
-  \frametitle{表格}
-  \begin{table}
-    \begin{tabular}{lcl}\toprule
-      姓名   & 出生年份 & 母校 (本科)  \\ \midrule
-      陶哲轩 & 1975     & 弗林德斯大学 \\
-      张益唐 & 1955     & 北京大学     \\
-      丘成桐 & 1949     & 香港中文大学 \\ \bottomrule
-    \end{tabular}
-    \caption{二十一世纪的数学家}
-  \end{table}
+  \frametitle{Time series}
+  \begin{block}{时间序列模型}
+    最近，预训练模型，特别是基于Transformer的预训练模型在计算机视觉和自然语言处理等领域取得了卓越的性能。受此启发，近来的研究开始考虑时间序列的预训练模型的设计。\\
+
+    首先，通过有监督、无监督和自监督学习对模型进行训练来获取恰当的表示，然后模型在目标领域进行微调以求在下游的时间序列任务（例如时间序列分类以及异常检测）中获得性能提升。
+  \end{block}
+\end{frame}
+
+
+\begin{frame}[t]
+  \frametitle{模型分类}
+  \begin{figure}
+    \includegraphics[width=.8\textwidth, height=.8\textheight, keepaspectratio]{taxonomy.pdf}
+    \caption{基于训练技巧和任务对模型分类}
+  \end{figure}
+\end{frame}
+
+\section[AstroLLaMA]{ 第3章 AstroLLaMA}\label{sec:3}
+
+
+
+\begin{frame}[t]
+  \frametitle{研究背景和动机}
+  \begin{itemize}
+    \item 预训练语言模型(LLM)在通用任务上表现出色，但在天文学等专业领域上效果不佳。
+    \item 天文领域数据相对较少，导致LLM在此领域知识建模效果不佳，存在hallucination等问题。
+    \item 天文领域专用LLM较少，如astroBERT，但参数较少。
+  \end{itemize}
 \end{frame}
 
 \begin{frame}[t]
-  \frametitle{引用}
-  \begin{theorem}[\citeauthor{graham1989concrete}\citeyear{graham1989concrete}]\label{thm1}
-    \[\textbf{具体 (\red{Concrete})} = \textbf{连续 (\red{Con}tinuous)} + \textbf{离散 (Dis\red{crete})}\]
-  \end{theorem}
-  \vfill
-  \begin{proof}
-    证明过程.
-  \end{proof}
-  引用定理~\ref{thm1}.
-  \blfootnote{\printbibliography[heading=none,keyword={concrete}]}
+  \frametitle{模型构建}
+  \begin{itemize}
+    \item 基于LLaMA-2模型，使用300,000+篇arXiv论文摘要进行微调。
+    \item 数据集处理和模型参数设定。
+    \item 微调后的模型在天文领域的适应性得到了验证，perplexity指标降低了32.5%。
+  \end{itemize}
 \end{frame}
 
-\section[第 2 章缩写标题也可以很长长长长长长长长长]{第二章标题}\label{sec:2}
-\subsection*{第 4 节缩写标题 (不在目录显示)}\label{sec:2-1}
-\makeatletter
 \begin{frame}[t]
-  \frametitle{自定义字体大小}
-  \begin{center}
-    \begin{tabular}{ll}
-      \Huge  $\backslash$Huge                & \Huge \structure{24.88 pt}     \\
-      \huge  $\backslash$huge                & \huge \structure{20.74 pt}     \\
-      \LARGE $\backslash$LARGE               & \LARGE \structure{17.28 pt}    \\
-      \Large $\backslash$Large               & \Large \structure{14.4 pt}     \\
-      \large $\backslash$large               & \large \structure{12 pt}       \\
-      \normalsize $\backslash$normalsize     & \normalsize \structure{10 pt}  \\
-      \small $\backslash$small               & \small \structure{9 pt}        \\
-      \footnotesize $\backslash$footnotesize & \footnotesize \structure{8 pt} \\
-      \scriptsize $\backslash$scriptsize     & \scriptsize \structure{7 pt}   \\
-      \tiny $\backslash$tiny                 & \tiny \structure{5 pt}
-    \end{tabular}
-  \end{center}
+  \frametitle{模型评估}
+  \begin{itemize}
+    \item 模型在文本生成和embedding空间质量上进行评估。
+    \item 与LLaMA-2/GPT-4对比，AstroLLaMA能生成更加专业和准确的文本。
+    \item embedding空间显示了更强的语义建模能力。
+  \end{itemize}
 \end{frame}
-\makeatother
+
+\begin{frame}[t]
+  \frametitle{创新点和意义}
+  \begin{itemize}
+    \item 提出了首个大规模的天文LLM。
+    \item 验证了专用微调的有效性。
+    \item 开放了模型权重，为天文AI研究开启了新的可能性。
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{当前局限和未来工作}
+  \begin{itemize}
+    \item 模型在某些领域知识上仍有缺陷。
+    \item 模型在生成数据时可能会产生不准确的数值。
+    \item 公开模型的目的是鼓励社区的参与，提高模型的准确性和创造性。
+  \end{itemize}
+\end{frame}
+
+
 
 \begin{frame}[noframenumbering, allowframebreaks, t]
   \frametitle{参考文献}

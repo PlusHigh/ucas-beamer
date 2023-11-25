@@ -21,7 +21,7 @@
 \usepackage[backend=biber, style=gb7714-2015]{biblatex}
 \addbibresource{ref.bib}
 
-\title[UCAS Beamer (\LaTeX{})]{使用集成强化方式处理不平衡数据}
+\title[UCAS Beamer (\LaTeX{})]{Transformer与时间序列分析}
 % \subtitle[非官方]{非官方的模版}
 \author[H. Zeng]{\href{mailto:haozeng1210@gmail.com}{曾滈}}
 \institute[NAOC]{中国科学院国家天文台}
@@ -40,71 +40,62 @@
   \tableofcontents
 \end{frame}
 
+\section{第一章：Transformer与时间序列分析}
 
-\section{第1章 问题与现有方法}\label{sec:1}
-
-\begin{frame}[t]
-  \frametitle{分类周期变星存在的问题}
-  不同类别周期变星的样本量存在高度不平衡。
-\end{frame}
-
-\begin{frame}[t]
-  \frametitle{现有的解决方法}
+\begin{frame}{序列模型架构}
+  \frametitle{挑战与解决方法}
   \begin{itemize}
-    \item 传统机器学习算法:SMOTE、Self-paced Ensemble等
-    \item 数据生成:添加噪声、高斯过程、深度生成模型
+    \item 挑战：转换器模型在处理序列数据方面极具潜力，特别是在处理天文时间序列数据时。然而，由于数据中的测量误差和不规律采样，需要适应这些模型来处理天文数据的独特挑战。
+    \item 解决方法：Astronet通过高斯过程插值和规律间隔的重采样技术有效解决了不规律采样问题，而ATAT模型则在天体分类中，通过融合光变曲线的红移等元信息到转换器架构中，并利用可学习的傅立叶系数来处理不规律采样，避免了高斯过程回归成本高昂的问题。
   \end{itemize}
 \end{frame}
 
-\section{第2章 本文方法与结果}\label{sec:2}
 
-\begin{frame}[t]
-  \frametitle{数据层面}
-  利用高斯过程生成小样本量类别的合成光变曲线。
-\end{frame}
+\section{第二章：预训练范式与编码器改进}
 
-\begin{frame}[t]
-  \frametitle{模型层面}
+\begin{frame}{预训练范式及改进部分}
   \begin{itemize}
-    \item RNN-based神经网络
-    \item RNN + CNN混合结构神经网络
+    \item \textbf{天文时间序列分析的预训练范式}
+          \begin{itemize}
+            \item 预训练范式提高了模型性能，成为该领域重要工具。
+          \end{itemize}
+    \item \textbf{TimeModAttn模型的编码器阶段}
+          \begin{itemize}
+            \item 结合自编码器架构和注意力机制，优化状态空间模型的重构。
+          \end{itemize}
+    \item \textbf{位置编码的创新}
+          \begin{itemize}
+            \item 可训练的位置编码在变星分类中表现出色。
+          \end{itemize}
   \end{itemize}
 \end{frame}
 
-\begin{frame}[t]
-  \frametitle{训练优化}
-  采用bagging-like方式组织数据增强和模型训练,减轻过拟合。
-\end{frame}
 
-\begin{frame}[t]
-  \frametitle{取得的主要结果}
+\section{第三章：天文图像的应用}
+
+\begin{frame}{Transformer Vesus CNN}
   \begin{itemize}
-    \item 在CRTS数据集上Macro F1得分达到0.75。
-    \item 总体精度达到86.2\%。
+    \item \textbf{Transformer在天文图像中的应用}
+          \begin{itemize}
+            \item 处理Subaru望远镜的重叠图像，实现识别、解混合和分类任务顺序执行。
+          \end{itemize}
+    \item \textbf{CNN与计算成本的权衡}
+          \begin{itemize}
+            \item 在计算资源有限时，CNN处理小规模数据集效率高，仍然有其价值。
+          \end{itemize}
   \end{itemize}
 \end{frame}
 
-\section{第3章 与现有方法的对比}\label{sec:3}
-
-\begin{frame}[t]
-  \frametitle{与现有方法的不同}
+\begin{frame}{模型的可解释性与CBS-GPT的应用}
   \begin{itemize}
-    \item 使用高斯过程而不是SMOTE生成合成数据。
-    \item 尝试了不同的神经网络架构。
-    \item 采用了bagging-like的模型集成方法。
-  \end{itemize}
-\end{frame}
-
-\section{第4章 展望}\label{sec:4}
-
-
-
-\begin{frame}[t]
-  \frametitle{未来展望}
-  \begin{itemize}
-    \item 继续优化小样本类别分类。
-    \item 探索更高效的模型和训练方式。
-    \item 在其他数据上验证所提出的方法。
+    \item \textbf{增强模型可解释性}
+          \begin{itemize}
+            \item 使用注意力图和工具来可视化输入数据中的关键部分，帮助理解决策过程。（但好像仅仅是输入数据的阶段）
+          \end{itemize}
+    \item \textbf{CBS-GPT模型介绍}
+          \begin{itemize}
+            \item 针对波形复杂性问题，提高紧凑双星系统波形的预测能力和解释性。
+          \end{itemize}
   \end{itemize}
 \end{frame}
 
